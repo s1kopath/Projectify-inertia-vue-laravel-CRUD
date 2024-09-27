@@ -2,14 +2,21 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Project extends Model
 {
     use HasFactory;
+    use SoftDeletes;
     protected $guarded = [];
     protected $appends = ['img'];
+
+    public function staff()
+    {
+        return $this->belongsTo(User::class, 'staff_id');
+    }
 
     public function getImgAttribute()
     {

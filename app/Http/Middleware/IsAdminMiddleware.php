@@ -20,6 +20,6 @@ class IsAdminMiddleware
             return $next($request);
         }
         Auth::logout();
-        return redirect()->route('login')->with('error', 'Unauthorized');
+        return to_route('login')->with('error', 'Unauthorized');
     }
 }

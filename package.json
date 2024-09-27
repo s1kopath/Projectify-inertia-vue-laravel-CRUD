@@ -19,6 +19,7 @@
         "datatables.net-buttons-dt": "^3.1.2",
         "datatables.net-vue3": "^3.0.2",
         "vue-toastification": "^2.0.0-rc.5",
+        "vue3-dropzone": "^2.2.1",
         "ziggy-js": "^2.3.0"
     }
 }
